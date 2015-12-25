@@ -6,7 +6,7 @@ import java.awt.event.KeyListener;
 import java.net.InetAddress;
 
 import jogo.Arena;
-import jogo.EfeitoSonoro;
+
 import jogo.Input;
 import jogo.Packet02Move;
 import jogo.Tanque;

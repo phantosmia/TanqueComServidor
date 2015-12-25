@@ -35,7 +35,7 @@ public class Arena extends JComponent implements ActionListener, Runnable {
 	private static final long serialVersionUID = 1L;
 	private ArrayList<TanqueMP> tanques = new ArrayList<TanqueMP>();
 	private Timer contador;
-	EfeitoSonoro som;
+	
 	public TanqueMP tanque;
 	public static Arena arena;
 	public ClienteTanque socketClient;
@@ -56,7 +56,7 @@ public class Arena extends JComponent implements ActionListener, Runnable {
 		setFocusable(true);
 		contador = new Timer(100, this);
 		contador.start();
-		EfeitoSonoro.init();
+	
 		arena = this;
 		input = new Input(this);
 		Color c = JColorChooser.showDialog(this, "Escolha a cor do tanque", Color.black);
@@ -259,7 +259,7 @@ public class Arena extends JComponent implements ActionListener, Runnable {
 					//System.out.println("A arena printa"+t1.isEstaAtivo());
 					if (tiro.getBordasTiro().intersects(t1.getBordasTanque())
 							&& (!tiro.getUsuario().equals(t1.getUsuario()))) {
-						EfeitoSonoro.EXPLODIR.play();
+						
 						t1.setEstaAtivo(true);
 						// tanques2.add(t1); //evitando a modification
 						// exception, criei uma nova lista para armazenar os
